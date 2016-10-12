@@ -1,0 +1,48 @@
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\bin\Debug\EmoMetro.exe.config
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\Interop.WMPLib.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\Multimov.vbproj.ResolveComReference.cache
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.exe
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.xml
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.pdb
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\bin\Debug\EmoMetro.exe
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\bin\Debug\EmoMetro.pdb
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\bin\Debug\EmoMetro.xml
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\bin\Debug\AForge.Video.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\bin\Debug\AForge.Video.FFMPEG.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\bin\Debug\Interop.WMPLib.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\Multimov.vbprojResolveAssemblyReference.cache
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.AudioForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.DataViewerForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.EmoApp.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.MsgForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.Resources.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.VideoPlayerForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\EmoMetro.WebcamForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimov\Multimov\obj\Debug\Multimov.vbproj.GenerateResource.Cache
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\bin\Debug\EmoMetro.exe.config
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\Interop.WMPLib.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\Multimov.vbproj.ResolveComReference.cache
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.exe
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.xml
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.pdb
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\bin\Debug\EmoMetro.exe
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\bin\Debug\EmoMetro.pdb
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\bin\Debug\EmoMetro.xml
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\bin\Debug\AForge.Video.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\bin\Debug\AForge.Video.FFMPEG.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\bin\Debug\Interop.WMPLib.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\Multimov.vbprojResolveAssemblyReference.cache
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.AudioForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.DataViewerForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.EmoApp.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.MsgForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.Resources.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.VideoPlayerForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\EmoMetro.WebcamForm.resources
+C:\Users\warha\Desktop\Projects\Multimov\in develop_\Multimod - copia\obj\Debug\Multimov.vbproj.GenerateResource.Cache
