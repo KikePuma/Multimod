@@ -8,9 +8,15 @@
         If DarkTheme Then
             CurrentTheme = MetroFramework.MetroThemeStyle.Light
             DarkTheme = False
+            VideoPlayerForm.playButton.Image = My.Resources.lplay
+            VideoPlayerForm.pauseButton.Image = My.Resources.lpause
+            VideoPlayerForm.stopButton.Image = My.Resources.lstop
         Else
             CurrentTheme = MetroFramework.MetroThemeStyle.Dark
             DarkTheme = True
+            VideoPlayerForm.playButton.Image = My.Resources.dplay
+            VideoPlayerForm.pauseButton.Image = My.Resources.dpause
+            VideoPlayerForm.stopButton.Image = My.Resources.dstop
         End If
 
         Me.Theme = CurrentTheme
@@ -20,11 +26,15 @@
         ElanButton.Theme = CurrentTheme
         WebcamButton.Theme = CurrentTheme
         EmotivButton.Theme = CurrentTheme
+        videoPlayerButton.Theme = CurrentTheme
+        audioPlayerButton.Theme = CurrentTheme
         WebcamForm.Theme = CurrentTheme
         WebcamForm.recordButton.Theme = CurrentTheme
         WebcamForm.cameraButton.Theme = CurrentTheme
+        VideoPlayerForm.Theme = CurrentTheme
         Me.Refresh()
         WebcamForm.Refresh()
+        VideoPlayerForm.Refresh()
 
     End Sub
 
@@ -133,5 +143,9 @@
             'agrupamos los archivos en una misma carpeta
             getOutputFiles()
         End If
+    End Sub
+
+    Private Sub videoPlayerButton_Click(sender As Object, e As EventArgs) Handles videoPlayerButton.Click
+        VideoPlayerForm.Show()
     End Sub
 End Class

@@ -29,6 +29,8 @@ Partial Class EmoApp
         Me.WebcamButton = New MetroFramework.Controls.MetroButton()
         Me.EmotivButton = New MetroFramework.Controls.MetroButton()
         Me.synchroButton = New MetroFramework.Controls.MetroButton()
+        Me.audioPlayerButton = New MetroFramework.Controls.MetroButton()
+        Me.videoPlayerButton = New MetroFramework.Controls.MetroButton()
         Me.SuspendLayout()
         '
         'ThemeCheckBox
@@ -100,21 +102,48 @@ Partial Class EmoApp
         '
         'synchroButton
         '
-        Me.synchroButton.Location = New System.Drawing.Point(99, 116)
+        Me.synchroButton.Location = New System.Drawing.Point(19, 76)
         Me.synchroButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.synchroButton.Name = "synchroButton"
-        Me.synchroButton.Size = New System.Drawing.Size(180, 100)
+        Me.synchroButton.Size = New System.Drawing.Size(228, 130)
         Me.synchroButton.Style = MetroFramework.MetroColorStyle.Red
         Me.synchroButton.TabIndex = 6
         Me.synchroButton.Text = "START SYNCHRO"
         Me.synchroButton.Theme = MetroFramework.MetroThemeStyle.Dark
         Me.synchroButton.UseSelectable = True
         '
+        'audioPlayerButton
+        '
+        Me.audioPlayerButton.Enabled = False
+        Me.audioPlayerButton.Location = New System.Drawing.Point(19, 247)
+        Me.audioPlayerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.audioPlayerButton.Name = "audioPlayerButton"
+        Me.audioPlayerButton.Size = New System.Drawing.Size(228, 33)
+        Me.audioPlayerButton.Style = MetroFramework.MetroColorStyle.Red
+        Me.audioPlayerButton.TabIndex = 7
+        Me.audioPlayerButton.Text = "AUDIO PLAYER"
+        Me.audioPlayerButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.audioPlayerButton.UseSelectable = True
+        '
+        'videoPlayerButton
+        '
+        Me.videoPlayerButton.Location = New System.Drawing.Point(19, 210)
+        Me.videoPlayerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.videoPlayerButton.Name = "videoPlayerButton"
+        Me.videoPlayerButton.Size = New System.Drawing.Size(228, 33)
+        Me.videoPlayerButton.Style = MetroFramework.MetroColorStyle.Red
+        Me.videoPlayerButton.TabIndex = 8
+        Me.videoPlayerButton.Text = "VIDEO PLAYER"
+        Me.videoPlayerButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.videoPlayerButton.UseSelectable = True
+        '
         'EmoApp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(378, 368)
+        Me.Controls.Add(Me.videoPlayerButton)
+        Me.Controls.Add(Me.audioPlayerButton)
         Me.Controls.Add(Me.synchroButton)
         Me.Controls.Add(Me.EmotivButton)
         Me.Controls.Add(Me.WebcamButton)
@@ -141,4 +170,6 @@ Partial Class EmoApp
     Friend WithEvents WebcamButton As MetroFramework.Controls.MetroButton
     Friend WithEvents EmotivButton As MetroFramework.Controls.MetroButton
     Friend WithEvents synchroButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents audioPlayerButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents videoPlayerButton As MetroFramework.Controls.MetroButton
 End Class

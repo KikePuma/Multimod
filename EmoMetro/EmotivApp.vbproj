@@ -127,6 +127,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="VideoPlayerForm.Designer.vb">
+      <DependentUpon>VideoPlayerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VideoPlayerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WebcamForm.Designer.vb">
       <DependentUpon>WebcamForm.vb</DependentUpon>
     </Compile>
@@ -143,9 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoPlayerForm.resx">
+      <DependentUpon>VideoPlayerForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WebcamForm.resx">
       <DependentUpon>WebcamForm.vb</DependentUpon>
@@ -172,8 +181,34 @@
     <Content Include="avfilter-2.dll" />
     <Content Include="avformat-53.dll" />
     <Content Include="avutil-51.dll" />
+    <None Include="bin\Debug\assets_\play.png" />
+    <None Include="bin\Debug\assets_\dplay.png" />
+    <None Include="bin\Debug\assets_\dpause.png" />
+    <None Include="bin\Debug\assets_\dstop.png" />
+    <None Include="bin\Debug\assets_\lpause.png" />
+    <None Include="bin\Debug\assets_\lplay.png" />
+    <None Include="bin\Debug\assets_\lstop.png" />
     <Content Include="swresample-0.dll" />
     <Content Include="swscale-2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

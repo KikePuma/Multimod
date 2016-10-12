@@ -1,33 +1,23 @@
-"emotiv app 1.3" by Kike Puma
+"emotiv app 1.4" by Kike Puma
 
 ===========================================
 
-- ¡Botón Synchro insertado!
+- ¡Reproductor de vídeos insertado!
 
-- Desmejora del código de la cámara web, usando ahora infinidad de
+- Nuevos botones personalizados para el control del vídeo: play, pause, stop
 
-bloques Try Catch para evitar posibles errores debido al Synchro Mode
+- Nuevos diseños y colores para los botones de control de vídeo
 
-- La nueva funcionalidad permite recoger datos EEG en csv y graba video
+- Nuevo botón para reproducir audio. Actualmente desactivado
 
-en formato avi, todo ello simultáneamente y usando sólamente el botón
+- El MediaPlayer utiliza el propio reproductor de Windows, evitando así
 
-Synchro
+posibles errores de librerías y pudiendo reproducir todo tipo de formatos
 
-- Mejora respecto a la seguridad del código en general. El uso se ha
+- Es posible controlar el momento inicial, puediendo así reproducir el vídeo
 
-hecho más intuitivo para evitar fallos debido a malas prácticas por
+desde un minuto X cualquiera, pero una vez elegido el vídeo deseado, empieza
 
-parte del usuario
+automáticamente y sólo es posible pausarlo de manera manual
 
-- Se ha añadido una subrutina que junta de forma automática todos los
-
-archivos generados en una misma carpeta llamada "output_", aunque contiene
-
-todavía algún que otro error
-
-- Se han modificado los nombres de todos los archivos que se generen. A
-
-partir de ahora, llevarán la fecha inicial de la grabacion con el formato
-
-(yy.MM.dd hh.mm.ss)
+- Arreglados problemas de diseño y colores de los nuevos botones y formularios
