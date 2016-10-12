@@ -36,6 +36,7 @@ Partial Class EmoApp
         Me.ThemeCheckBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         Me.ThemeCheckBox.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ThemeCheckBox.Location = New System.Drawing.Point(391, 470)
+        Me.ThemeCheckBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ThemeCheckBox.Name = "ThemeCheckBox"
         Me.ThemeCheckBox.Size = New System.Drawing.Size(95, 17)
         Me.ThemeCheckBox.Style = MetroFramework.MetroColorStyle.Green
@@ -46,7 +47,8 @@ Partial Class EmoApp
         '
         'PraatButton
         '
-        Me.PraatButton.Location = New System.Drawing.Point(23, 456)
+        Me.PraatButton.Location = New System.Drawing.Point(23, 455)
+        Me.PraatButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PraatButton.Name = "PraatButton"
         Me.PraatButton.Size = New System.Drawing.Size(111, 31)
         Me.PraatButton.Style = MetroFramework.MetroColorStyle.Red
@@ -57,7 +59,8 @@ Partial Class EmoApp
         '
         'ElanButton
         '
-        Me.ElanButton.Location = New System.Drawing.Point(140, 456)
+        Me.ElanButton.Location = New System.Drawing.Point(140, 455)
+        Me.ElanButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ElanButton.Name = "ElanButton"
         Me.ElanButton.Size = New System.Drawing.Size(111, 31)
         Me.ElanButton.Style = MetroFramework.MetroColorStyle.Red
@@ -72,8 +75,8 @@ Partial Class EmoApp
         '
         'WebcamButton
         '
-        Me.WebcamButton.Enabled = False
-        Me.WebcamButton.Location = New System.Drawing.Point(23, 419)
+        Me.WebcamButton.Location = New System.Drawing.Point(23, 418)
+        Me.WebcamButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.WebcamButton.Name = "WebcamButton"
         Me.WebcamButton.Size = New System.Drawing.Size(111, 31)
         Me.WebcamButton.Style = MetroFramework.MetroColorStyle.Red
@@ -84,7 +87,8 @@ Partial Class EmoApp
         '
         'EmotivButton
         '
-        Me.EmotivButton.Location = New System.Drawing.Point(140, 419)
+        Me.EmotivButton.Location = New System.Drawing.Point(140, 418)
+        Me.EmotivButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.EmotivButton.Name = "EmotivButton"
         Me.EmotivButton.Size = New System.Drawing.Size(111, 31)
         Me.EmotivButton.Style = MetroFramework.MetroColorStyle.Red
@@ -103,9 +107,11 @@ Partial Class EmoApp
         Me.Controls.Add(Me.ElanButton)
         Me.Controls.Add(Me.PraatButton)
         Me.Controls.Add(Me.ThemeCheckBox)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "EmoApp"
+        Me.Padding = New System.Windows.Forms.Padding(20, 74, 20, 20)
         Me.Resizable = False
         Me.Style = MetroFramework.MetroColorStyle.Green
         Me.Text = "EmotivApp"
