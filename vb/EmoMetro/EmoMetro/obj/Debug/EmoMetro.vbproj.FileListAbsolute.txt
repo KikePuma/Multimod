@@ -1,0 +1,17 @@
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\bin\Debug\EmoMetro.exe.config
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\bin\Debug\EmoMetro.exe
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\bin\Debug\EmoMetro.pdb
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\bin\Debug\EmoMetro.xml
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\bin\Debug\MetroFramework.Design.dll
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\bin\Debug\MetroFramework.dll
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\obj\Debug\EmoMetro.vbprojResolveAssemblyReference.cache
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\obj\Debug\EmoMetro.Resources.resources
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\obj\Debug\EmoMetro.vbproj.GenerateResource.Cache
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\obj\Debug\EmoMetro.exe
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\obj\Debug\EmoMetro.xml
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\obj\Debug\EmoMetro.pdb
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\obj\Debug\EmoMetro.EmoApp.resources
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\obj\Debug\EmoMetro.MsgForm.resources
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\obj\Debug\EmoMetro.WebcamForm.resources
+C:\Users\warha\Documents\Visual Studio 2015\Projects\EmoMetro\EmoMetro\bin\Debug\WebCAM.dll

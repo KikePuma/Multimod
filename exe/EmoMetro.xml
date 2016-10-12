@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EmoMetro
+</name>
+</assembly>
+<members>
+<member name="T:EmoMetro.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:EmoMetro.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:EmoMetro.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="F:EmoMetro.Data.DarkTheme">
+ ## STYLE VARIABLES ##
+</member>
+<member name="F:EmoMetro.Data.NullPath">
+ ## PROGRAM PATH ##
+</member>
+<member name="F:EmoMetro.Data.Msg">
+ ### MESSAGES ###
+</member>
+</members>
+</doc>
