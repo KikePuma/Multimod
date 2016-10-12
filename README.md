@@ -1,19 +1,33 @@
-"emotiv app 1.2" by Kike Puma
+"emotiv app 1.3" by Kike Puma
 
 ===========================================
 
-- ¡Cámara web integrada usando la librería AForge!
+- ¡Botón Synchro insertado!
 
-- Ya se puede grabar usando la cámara web
+- Desmejora del código de la cámara web, usando ahora infinidad de
 
-- Resueltos problemas con el diseño y los colores del WebcamForm
+bloques Try Catch para evitar posibles errores debido al Synchro Mode
 
-- Resueltos problemas con el diseño y los colores del EmotivButton
+- La nueva funcionalidad permite recoger datos EEG en csv y graba video
 
-- Nuevo diseño del EEGWriter que lleva integrado, mostrando una
+en formato avi, todo ello simultáneamente y usando sólamente el botón
 
-ventana mucho mejor visualmente
+Synchro
 
-- Ahora la aplicación corre con un procesamiento de 32bits (x86)
+- Mejora respecto a la seguridad del código en general. El uso se ha
 
-- Ahora la aplicación corre usando .NET Framework 4.6
+hecho más intuitivo para evitar fallos debido a malas prácticas por
+
+parte del usuario
+
+- Se ha añadido una subrutina que junta de forma automática todos los
+
+archivos generados en una misma carpeta llamada "output_", aunque contiene
+
+todavía algún que otro error
+
+- Se han modificado los nombres de todos los archivos que se generen. A
+
+partir de ahora, llevarán la fecha inicial de la grabacion con el formato
+
+(yy.MM.dd hh.mm.ss)

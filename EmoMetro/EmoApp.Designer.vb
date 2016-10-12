@@ -28,6 +28,7 @@ Partial Class EmoApp
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.WebcamButton = New MetroFramework.Controls.MetroButton()
         Me.EmotivButton = New MetroFramework.Controls.MetroButton()
+        Me.synchroButton = New MetroFramework.Controls.MetroButton()
         Me.SuspendLayout()
         '
         'ThemeCheckBox
@@ -35,7 +36,7 @@ Partial Class EmoApp
         Me.ThemeCheckBox.AutoSize = True
         Me.ThemeCheckBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         Me.ThemeCheckBox.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ThemeCheckBox.Location = New System.Drawing.Point(391, 470)
+        Me.ThemeCheckBox.Location = New System.Drawing.Point(271, 335)
         Me.ThemeCheckBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ThemeCheckBox.Name = "ThemeCheckBox"
         Me.ThemeCheckBox.Size = New System.Drawing.Size(95, 17)
@@ -47,7 +48,7 @@ Partial Class EmoApp
         '
         'PraatButton
         '
-        Me.PraatButton.Location = New System.Drawing.Point(23, 455)
+        Me.PraatButton.Location = New System.Drawing.Point(19, 321)
         Me.PraatButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PraatButton.Name = "PraatButton"
         Me.PraatButton.Size = New System.Drawing.Size(111, 31)
@@ -59,7 +60,7 @@ Partial Class EmoApp
         '
         'ElanButton
         '
-        Me.ElanButton.Location = New System.Drawing.Point(140, 455)
+        Me.ElanButton.Location = New System.Drawing.Point(136, 321)
         Me.ElanButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ElanButton.Name = "ElanButton"
         Me.ElanButton.Size = New System.Drawing.Size(111, 31)
@@ -75,7 +76,7 @@ Partial Class EmoApp
         '
         'WebcamButton
         '
-        Me.WebcamButton.Location = New System.Drawing.Point(23, 418)
+        Me.WebcamButton.Location = New System.Drawing.Point(19, 284)
         Me.WebcamButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.WebcamButton.Name = "WebcamButton"
         Me.WebcamButton.Size = New System.Drawing.Size(111, 31)
@@ -87,7 +88,7 @@ Partial Class EmoApp
         '
         'EmotivButton
         '
-        Me.EmotivButton.Location = New System.Drawing.Point(140, 418)
+        Me.EmotivButton.Location = New System.Drawing.Point(136, 284)
         Me.EmotivButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.EmotivButton.Name = "EmotivButton"
         Me.EmotivButton.Size = New System.Drawing.Size(111, 31)
@@ -97,11 +98,24 @@ Partial Class EmoApp
         Me.EmotivButton.Theme = MetroFramework.MetroThemeStyle.Dark
         Me.EmotivButton.UseSelectable = True
         '
+        'synchroButton
+        '
+        Me.synchroButton.Location = New System.Drawing.Point(99, 116)
+        Me.synchroButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.synchroButton.Name = "synchroButton"
+        Me.synchroButton.Size = New System.Drawing.Size(180, 100)
+        Me.synchroButton.Style = MetroFramework.MetroColorStyle.Red
+        Me.synchroButton.TabIndex = 6
+        Me.synchroButton.Text = "START SYNCHRO"
+        Me.synchroButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.synchroButton.UseSelectable = True
+        '
         'EmoApp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(500, 500)
+        Me.ClientSize = New System.Drawing.Size(378, 368)
+        Me.Controls.Add(Me.synchroButton)
         Me.Controls.Add(Me.EmotivButton)
         Me.Controls.Add(Me.WebcamButton)
         Me.Controls.Add(Me.ElanButton)
@@ -126,4 +140,5 @@ Partial Class EmoApp
     Friend WithEvents OpenFileDialog As OpenFileDialog
     Friend WithEvents WebcamButton As MetroFramework.Controls.MetroButton
     Friend WithEvents EmotivButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents synchroButton As MetroFramework.Controls.MetroButton
 End Class

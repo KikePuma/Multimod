@@ -67,9 +67,13 @@ Partial Class WebcamForm
         Me.Controls.Add(Me.cameraButton)
         Me.Controls.Add(Me.recordButton)
         Me.Controls.Add(Me.preview)
+        Me.Location = New System.Drawing.Point(20, 20)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "WebcamForm"
         Me.Padding = New System.Windows.Forms.Padding(20, 74, 20, 20)
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Webcam"
         Me.Theme = MetroFramework.MetroThemeStyle.Dark
         CType(Me.preview, System.ComponentModel.ISupportInitialize).EndInit()
