@@ -1,4 +1,0 @@
-C:\Users\warha\Documents\GitHub\multimov_\multimov_-2f429406c5dae8176320ff468b1a1685b2b852c7\vb\EmoMetro\EmoMetro\bin\Debug\EmoMetro.exe.config
-C:\Users\warha\Documents\GitHub\multimov_\multimov_-2f429406c5dae8176320ff468b1a1685b2b852c7\vb\EmoMetro\EmoMetro\obj\Debug\EmoMetro.exe
-C:\Users\warha\Documents\GitHub\multimov_\multimov_-2f429406c5dae8176320ff468b1a1685b2b852c7\vb\EmoMetro\EmoMetro\obj\Debug\EmoMetro.xml
-C:\Users\warha\Documents\GitHub\multimov_\multimov_-2f429406c5dae8176320ff468b1a1685b2b852c7\vb\EmoMetro\EmoMetro\obj\Debug\EmoMetro.pdb
