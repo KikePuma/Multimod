@@ -73,6 +73,29 @@ C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.3.1\EmoMetro\EmoMetro\bin
 C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.3.1\EmoMetro\EmoMetro\obj\Debug\Interop.WMPLib.dll
 C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.3.1\EmoMetro\EmoMetro\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.3.1\EmoMetro\EmoMetro\obj\Debug\EmotivApp.vbproj.ResolveComReference.cache
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\bin\Debug\EmoMetro.exe.config
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\Interop.WMPLib.dll
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmotivApp.vbproj.ResolveComReference.cache
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmoMetro.exe
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmoMetro.xml
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmoMetro.pdb
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\bin\Debug\EmoMetro.exe
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\bin\Debug\EmoMetro.pdb
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\bin\Debug\EmoMetro.xml
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\bin\Debug\AForge.Video.dll
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\bin\Debug\AForge.Video.FFMPEG.dll
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\bin\Debug\Interop.WMPLib.dll
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmotivApp.vbprojResolveAssemblyReference.cache
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmoMetro.DataViewerForm.resources
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmoMetro.EmoApp.resources
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmoMetro.MsgForm.resources
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmoMetro.Resources.resources
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmoMetro.VideoPlayerForm.resources
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmoMetro.WebcamForm.resources
+C:\Users\warha\Desktop\ \ordenar_\camera\emotiv app 1.4\EmoMetro\EmoMetro\obj\Debug\EmotivApp.vbproj.GenerateResource.Cache
 C:\Users\warha\Documents\GitHub\multimov_\multimov_-2f429406c5dae8176320ff468b1a1685b2b852c7\EmoMetro\bin\Debug\EmoMetro.exe.config
 C:\Users\warha\Documents\GitHub\multimov_\multimov_-2f429406c5dae8176320ff468b1a1685b2b852c7\EmoMetro\obj\Debug\Interop.WMPLib.dll
 C:\Users\warha\Documents\GitHub\multimov_\multimov_-2f429406c5dae8176320ff468b1a1685b2b852c7\EmoMetro\obj\Debug\AxInterop.WMPLib.dll

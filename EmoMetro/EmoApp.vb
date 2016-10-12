@@ -1,41 +1,53 @@
 ﻿Public Class EmoApp
-    Private Sub EmoApp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-
+    'creamos la subrutina para cambiar el tema con el CheckedBox
     Private Sub ThemeCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ThemeCheckBox.CheckedChanged
         If DarkTheme Then
+            'cambiamos al Light Theme cuando tengamos el Dark
             CurrentTheme = MetroFramework.MetroThemeStyle.Light
+            ''MetroTextColor = MetroFramework.MetroColors.Black
+            ''MetroBackColor = MetroFramework.MetroColors.White
             DarkTheme = False
             VideoPlayerForm.playButton.Image = My.Resources.lplay
             VideoPlayerForm.pauseButton.Image = My.Resources.lpause
             VideoPlayerForm.stopButton.Image = My.Resources.lstop
         Else
+            'y lo mismo para a la inversa
             CurrentTheme = MetroFramework.MetroThemeStyle.Dark
+            ''MetroTextColor = MetroFramework.MetroColors.White
+            ''MetroBackColor = MetroFramework.MetroColors.Black
             DarkTheme = True
             VideoPlayerForm.playButton.Image = My.Resources.dplay
             VideoPlayerForm.pauseButton.Image = My.Resources.dpause
             VideoPlayerForm.stopButton.Image = My.Resources.dstop
-        End If
 
+        End If
+        'actulizamos el tema de todos los formularios y sus objetos
         Me.Theme = CurrentTheme
         ThemeCheckBox.Theme = CurrentTheme
-        synchroButton.Theme = CurrentTheme
-        PraatButton.Theme = CurrentTheme
-        ElanButton.Theme = CurrentTheme
+        SynchroButton.Theme = CurrentTheme
+        DataViewerButton.Theme = CurrentTheme
+        VideoPlayerButton.Theme = CurrentTheme
+        AudioPlayerButton.Theme = CurrentTheme
         WebcamButton.Theme = CurrentTheme
         EmotivButton.Theme = CurrentTheme
-        videoPlayerButton.Theme = CurrentTheme
-        audioPlayerButton.Theme = CurrentTheme
+        PraatButton.Theme = CurrentTheme
+        ElanButton.Theme = CurrentTheme
+
         WebcamForm.Theme = CurrentTheme
         WebcamForm.recordButton.Theme = CurrentTheme
         WebcamForm.cameraButton.Theme = CurrentTheme
+
         VideoPlayerForm.Theme = CurrentTheme
+
+        DataViewerForm.Theme = CurrentTheme
+        DataViewerForm.durationTrackBar.Theme = CurrentTheme
+        DataViewerForm.timeTextBox.Theme = CurrentTheme
+        DataViewerForm.setTimeButton.Theme = CurrentTheme
+        'y refrescamos todos ellos
         Me.Refresh()
         WebcamForm.Refresh()
         VideoPlayerForm.Refresh()
-
+        DataViewerForm.Refresh()
     End Sub
 
     Private Sub PraatButton_Click(sender As Object, e As EventArgs) Handles PraatButton.Click
@@ -44,7 +56,7 @@
         Catch startError As Exception
             'Console.WriteLine(startError.Message)
             Msg = "No Program Path Specified"
-            MsgForm.Show()
+            MsgForm.ShowDialog()
             OpenFileDialog.ShowDialog()
             MsgForm.Close()
             If OpenFileDialog.FileName <> NullPath Then
@@ -62,7 +74,7 @@
         Catch startError As Exception
             'Console.WriteLine(startError.Message)
             Msg = "No Program Path Specified"
-            MsgForm.Show()
+            MsgForm.ShowDialog()
             OpenFileDialog.ShowDialog()
             MsgForm.Close()
             If OpenFileDialog.FileName <> NullPath Then
@@ -102,9 +114,9 @@
         End Try
     End Sub
 
-    Private Sub synchroButton_Click(sender As Object, e As EventArgs) Handles synchroButton.Click
+    Private Sub synchroButton_Click(sender As Object, e As EventArgs) Handles SynchroButton.Click
         'la primera vez que pulsemos el boton de sincronizar
-        If synchroButton.Text = "START SYNCHRO" Then
+        If SynchroButton.Text = "START SYNCHRO" Then
             'si la camara no está visible
             If WebcamForm.Visible <> True Then
                 'mostramos el Form de la cámara
@@ -116,18 +128,18 @@
                 End If
             End If
             'una vez hecho esto, cambiamos el texto del boton
-            synchroButton.Text = "START RECORDING"
+            SynchroButton.Text = "START RECORDING"
             'si ya esta todo sincronizado...
-        ElseIf synchroButton.Text = "START RECORDING" Then
+        ElseIf SynchroButton.Text = "START RECORDING" Then
             'abrimos todo aquello que recoja datos
             EmotivButton_Click(sender, e)
             WebcamForm.startRecording()
             'cambiamos el texto del boton y el estilo del Form
-            synchroButton.Text = "STOP RECORDING"
+            SynchroButton.Text = "STOP RECORDING"
             Style = MetroFramework.MetroColorStyle.Red
             Refresh()
             'si estamos grabando...
-        ElseIf synchroButton.Text = "STOP RECORDING" Then
+        ElseIf SynchroButton.Text = "STOP RECORDING" Then
             'paramos todo aquello que este grabando algo
             WebcamForm.startRecording()
             Dim eegWriterProcess As Process
@@ -137,7 +149,7 @@
                 eegWriterProcess.CloseMainWindow()
             Next
             'cambiamos los estilos y el texto
-            synchroButton.Text = "START SYNCHRO"
+            SynchroButton.Text = "START SYNCHRO"
             Style = MetroFramework.MetroColorStyle.Green
             Refresh()
             'agrupamos los archivos en una misma carpeta
@@ -145,7 +157,11 @@
         End If
     End Sub
 
-    Private Sub videoPlayerButton_Click(sender As Object, e As EventArgs) Handles videoPlayerButton.Click
+    Private Sub videoPlayerButton_Click(sender As Object, e As EventArgs) Handles VideoPlayerButton.Click
         VideoPlayerForm.Show()
+    End Sub
+
+    Private Sub dataViewerButton_Click(sender As Object, e As EventArgs) Handles DataViewerButton.Click
+        DataViewerForm.Show()
     End Sub
 End Class

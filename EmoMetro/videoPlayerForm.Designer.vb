@@ -22,12 +22,14 @@ Partial Class VideoPlayerForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VideoPlayerForm))
         Me.player = New AxWMPLib.AxWindowsMediaPlayer()
         Me.pauseButton = New System.Windows.Forms.PictureBox()
         Me.playButton = New System.Windows.Forms.PictureBox()
         Me.stopButton = New System.Windows.Forms.PictureBox()
         Me.loadVideo = New System.Windows.Forms.OpenFileDialog()
+        Me.MyTimer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.player, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pauseButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.playButton, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,8 +79,13 @@ Partial Class VideoPlayerForm
         '
         Me.loadVideo.FileName = ".avi"
         '
+        'MyTimer
+        '
+        Me.MyTimer.Interval = 10
+        '
         'VideoPlayerForm
         '
+        Me.ApplyImageInvert = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(686, 574)
@@ -105,4 +112,5 @@ Partial Class VideoPlayerForm
     Friend WithEvents playButton As PictureBox
     Friend WithEvents pauseButton As PictureBox
     Friend WithEvents loadVideo As OpenFileDialog
+    Friend WithEvents MyTimer As Timer
 End Class

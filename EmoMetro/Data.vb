@@ -7,6 +7,8 @@
     '' ## STYLE VARIABLES ##
     Public DarkTheme As Boolean = True
     Public CurrentTheme As Integer = MetroFramework.MetroThemeStyle.Dark
+    Public MetroBackColor As Color = MetroFramework.MetroColors.Black
+    Public MetroTextColor As Color = Color.White
 
     '' ## PROGRAM PATH ##
     Public NullPath As String = "\dev"

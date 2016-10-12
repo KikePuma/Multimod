@@ -28,9 +28,10 @@ Partial Class EmoApp
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.WebcamButton = New MetroFramework.Controls.MetroButton()
         Me.EmotivButton = New MetroFramework.Controls.MetroButton()
-        Me.synchroButton = New MetroFramework.Controls.MetroButton()
-        Me.audioPlayerButton = New MetroFramework.Controls.MetroButton()
-        Me.videoPlayerButton = New MetroFramework.Controls.MetroButton()
+        Me.SynchroButton = New MetroFramework.Controls.MetroButton()
+        Me.AudioPlayerButton = New MetroFramework.Controls.MetroButton()
+        Me.VideoPlayerButton = New MetroFramework.Controls.MetroButton()
+        Me.DataViewerButton = New MetroFramework.Controls.MetroButton()
         Me.SuspendLayout()
         '
         'ThemeCheckBox
@@ -100,51 +101,64 @@ Partial Class EmoApp
         Me.EmotivButton.Theme = MetroFramework.MetroThemeStyle.Dark
         Me.EmotivButton.UseSelectable = True
         '
-        'synchroButton
+        'SynchroButton
         '
-        Me.synchroButton.Location = New System.Drawing.Point(19, 76)
-        Me.synchroButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.synchroButton.Name = "synchroButton"
-        Me.synchroButton.Size = New System.Drawing.Size(228, 130)
-        Me.synchroButton.Style = MetroFramework.MetroColorStyle.Red
-        Me.synchroButton.TabIndex = 6
-        Me.synchroButton.Text = "START SYNCHRO"
-        Me.synchroButton.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.synchroButton.UseSelectable = True
+        Me.SynchroButton.Location = New System.Drawing.Point(19, 82)
+        Me.SynchroButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.SynchroButton.Name = "SynchroButton"
+        Me.SynchroButton.Size = New System.Drawing.Size(336, 130)
+        Me.SynchroButton.Style = MetroFramework.MetroColorStyle.Red
+        Me.SynchroButton.TabIndex = 6
+        Me.SynchroButton.Text = "START SYNCHRO"
+        Me.SynchroButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.SynchroButton.UseSelectable = True
         '
-        'audioPlayerButton
+        'AudioPlayerButton
         '
-        Me.audioPlayerButton.Enabled = False
-        Me.audioPlayerButton.Location = New System.Drawing.Point(19, 247)
-        Me.audioPlayerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.audioPlayerButton.Name = "audioPlayerButton"
-        Me.audioPlayerButton.Size = New System.Drawing.Size(228, 33)
-        Me.audioPlayerButton.Style = MetroFramework.MetroColorStyle.Red
-        Me.audioPlayerButton.TabIndex = 7
-        Me.audioPlayerButton.Text = "AUDIO PLAYER"
-        Me.audioPlayerButton.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.audioPlayerButton.UseSelectable = True
+        Me.AudioPlayerButton.Enabled = False
+        Me.AudioPlayerButton.Location = New System.Drawing.Point(136, 247)
+        Me.AudioPlayerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.AudioPlayerButton.Name = "AudioPlayerButton"
+        Me.AudioPlayerButton.Size = New System.Drawing.Size(111, 33)
+        Me.AudioPlayerButton.Style = MetroFramework.MetroColorStyle.Red
+        Me.AudioPlayerButton.TabIndex = 7
+        Me.AudioPlayerButton.Text = "AUDIO PLAYER"
+        Me.AudioPlayerButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.AudioPlayerButton.UseSelectable = True
         '
-        'videoPlayerButton
+        'VideoPlayerButton
         '
-        Me.videoPlayerButton.Location = New System.Drawing.Point(19, 210)
-        Me.videoPlayerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.videoPlayerButton.Name = "videoPlayerButton"
-        Me.videoPlayerButton.Size = New System.Drawing.Size(228, 33)
-        Me.videoPlayerButton.Style = MetroFramework.MetroColorStyle.Red
-        Me.videoPlayerButton.TabIndex = 8
-        Me.videoPlayerButton.Text = "VIDEO PLAYER"
-        Me.videoPlayerButton.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.videoPlayerButton.UseSelectable = True
+        Me.VideoPlayerButton.Location = New System.Drawing.Point(19, 247)
+        Me.VideoPlayerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.VideoPlayerButton.Name = "VideoPlayerButton"
+        Me.VideoPlayerButton.Size = New System.Drawing.Size(111, 33)
+        Me.VideoPlayerButton.Style = MetroFramework.MetroColorStyle.Red
+        Me.VideoPlayerButton.TabIndex = 8
+        Me.VideoPlayerButton.Text = "VIDEO PLAYER"
+        Me.VideoPlayerButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.VideoPlayerButton.UseSelectable = True
+        '
+        'DataViewerButton
+        '
+        Me.DataViewerButton.Location = New System.Drawing.Point(253, 247)
+        Me.DataViewerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DataViewerButton.Name = "DataViewerButton"
+        Me.DataViewerButton.Size = New System.Drawing.Size(102, 68)
+        Me.DataViewerButton.Style = MetroFramework.MetroColorStyle.Red
+        Me.DataViewerButton.TabIndex = 9
+        Me.DataViewerButton.Text = "DATA VIEWER"
+        Me.DataViewerButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.DataViewerButton.UseSelectable = True
         '
         'EmoApp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(378, 368)
-        Me.Controls.Add(Me.videoPlayerButton)
-        Me.Controls.Add(Me.audioPlayerButton)
-        Me.Controls.Add(Me.synchroButton)
+        Me.Controls.Add(Me.DataViewerButton)
+        Me.Controls.Add(Me.VideoPlayerButton)
+        Me.Controls.Add(Me.AudioPlayerButton)
+        Me.Controls.Add(Me.SynchroButton)
         Me.Controls.Add(Me.EmotivButton)
         Me.Controls.Add(Me.WebcamButton)
         Me.Controls.Add(Me.ElanButton)
@@ -169,7 +183,8 @@ Partial Class EmoApp
     Friend WithEvents OpenFileDialog As OpenFileDialog
     Friend WithEvents WebcamButton As MetroFramework.Controls.MetroButton
     Friend WithEvents EmotivButton As MetroFramework.Controls.MetroButton
-    Friend WithEvents synchroButton As MetroFramework.Controls.MetroButton
-    Friend WithEvents audioPlayerButton As MetroFramework.Controls.MetroButton
-    Friend WithEvents videoPlayerButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents SynchroButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents AudioPlayerButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents VideoPlayerButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents DataViewerButton As MetroFramework.Controls.MetroButton
 End Class

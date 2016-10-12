@@ -99,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data.vb" />
+    <Compile Include="DataViewerForm.Designer.vb">
+      <DependentUpon>DataViewerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataViewerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EmoApp.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DataViewerForm.resx">
+      <DependentUpon>DataViewerForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmoApp.resx">
       <DependentUpon>EmoApp.vb</DependentUpon>
     </EmbeddedResource>

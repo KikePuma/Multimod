@@ -1,23 +1,21 @@
-"emotiv app 1.4" by Kike Puma
+"emotiv app 1.5" by Kike Puma
 
 ===========================================
 
-- ¡Reproductor de vídeos insertado!
+- ¡Nuevo botón para ver datos simultáneamente llamado Data Viewer!
 
-- Nuevos botones personalizados para el control del vídeo: play, pause, stop
+- Incluye un nuevo Form que permite reproducir cualquier tipo de video
 
-- Nuevos diseños y colores para los botones de control de vídeo
+utilizando el Windows Media Player
 
-- Nuevo botón para reproducir audio. Actualmente desactivado
+- Si no se carga un video en el DataViewer; el TrackBar, el botón y el TextBox
 
-- El MediaPlayer utiliza el propio reproductor de Windows, evitando así
+se deshabilitan automáticamente
 
-posibles errores de librerías y pudiendo reproducir todo tipo de formatos
+- TrackBar insertado para poder cambiar el frame a mostrar de manera visual
 
-- Es posible controlar el momento inicial, puediendo así reproducir el vídeo
+- TextBox insertado para poder cambiar el frame a mostrar de manera exacta
 
-desde un minuto X cualquiera, pero una vez elegido el vídeo deseado, empieza
+- Arreglados los temas y diseños de los nuevos formularios y componentes
 
-automáticamente y sólo es posible pausarlo de manera manual
-
-- Arreglados problemas de diseño y colores de los nuevos botones y formularios
+- El Video Player ya no reproduce de manera automática el archivo cargado
