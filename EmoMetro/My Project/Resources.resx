@@ -118,22 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lstop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\assets_\lstop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dstop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\assets_\dstop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\assets_\lplay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\assets_\dplay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dpause" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\assets_\dpause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dstop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\assets_\dstop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="lpause" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\assets_\lpause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\assets_\lplay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dsensors" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\assets_\dsensors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lstop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\assets_\lstop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lsensors" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\assets_\lsensors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

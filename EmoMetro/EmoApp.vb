@@ -10,6 +10,7 @@
             VideoPlayerForm.playButton.Image = My.Resources.lplay
             VideoPlayerForm.pauseButton.Image = My.Resources.lpause
             VideoPlayerForm.stopButton.Image = My.Resources.lstop
+            DataViewerForm.eegViewer.Image = My.Resources.lsensors
         Else
             'y lo mismo para a la inversa
             CurrentTheme = MetroFramework.MetroThemeStyle.Dark
@@ -19,6 +20,7 @@
             VideoPlayerForm.playButton.Image = My.Resources.dplay
             VideoPlayerForm.pauseButton.Image = My.Resources.dpause
             VideoPlayerForm.stopButton.Image = My.Resources.dstop
+            DataViewerForm.eegViewer.Image = My.Resources.dsensors
 
         End If
         'actulizamos el tema de todos los formularios y sus objetos
@@ -43,6 +45,9 @@
         DataViewerForm.durationTrackBar.Theme = CurrentTheme
         DataViewerForm.timeTextBox.Theme = CurrentTheme
         DataViewerForm.setTimeButton.Theme = CurrentTheme
+        DataViewerForm.loadVideoButton.Theme = CurrentTheme
+        DataViewerForm.loadWebcamButton.Theme = CurrentTheme
+        DataViewerForm.eegViewerLabel.Theme = CurrentTheme
         'y refrescamos todos ellos
         Me.Refresh()
         WebcamForm.Refresh()
@@ -117,6 +122,11 @@
     Private Sub synchroButton_Click(sender As Object, e As EventArgs) Handles SynchroButton.Click
         'la primera vez que pulsemos el boton de sincronizar
         If SynchroButton.Text = "START SYNCHRO" Then
+            'damos la opcion de elegir un video
+            If MetroFramework.MetroMessageBox.Show(Me, "Would you like to load a video?", "Sample video", MessageBoxButtons.OKCancel, MessageBoxIcon.Question
+                                                   ) = DialogResult.OK Then
+                VideoPlayerForm.Show()
+            End If
             'si la camara no está visible
             If WebcamForm.Visible <> True Then
                 'mostramos el Form de la cámara
@@ -132,8 +142,12 @@
             'si ya esta todo sincronizado...
         ElseIf SynchroButton.Text = "START RECORDING" Then
             'abrimos todo aquello que recoja datos
-            EmotivButton_Click(sender, e)
-            WebcamForm.startRecording()
+            Try
+                EmotivButton_Click(sender, e)
+                WebcamForm.startRecording()
+                VideoPlayerForm.playButton_Click(sender, e)
+            Catch ex As Exception
+            End Try
             'cambiamos el texto del boton y el estilo del Form
             SynchroButton.Text = "STOP RECORDING"
             Style = MetroFramework.MetroColorStyle.Red
@@ -141,13 +155,17 @@
             'si estamos grabando...
         ElseIf SynchroButton.Text = "STOP RECORDING" Then
             'paramos todo aquello que este grabando algo
-            WebcamForm.startRecording()
-            Dim eegWriterProcess As Process
-            Dim eegWriterProcesses() As Process
-            eegWriterProcesses = Process.GetProcessesByName("eegwriter")
-            For Each eegWriterProcess In eegWriterProcesses
-                eegWriterProcess.CloseMainWindow()
-            Next
+            Try
+                VideoPlayerForm.pauseButton_Click(sender, e)
+                WebcamForm.startRecording()
+                Dim eegWriterProcess As Process
+                Dim eegWriterProcesses() As Process
+                eegWriterProcesses = Process.GetProcessesByName("eegwriter")
+                For Each eegWriterProcess In eegWriterProcesses
+                    eegWriterProcess.CloseMainWindow()
+                Next
+            Catch ex As Exception
+            End Try
             'cambiamos los estilos y el texto
             SynchroButton.Text = "START SYNCHRO"
             Style = MetroFramework.MetroColorStyle.Green

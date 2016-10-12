@@ -5,66 +5,102 @@ Public Class DataViewerForm
     'definimos las variables a usar
     Dim currentTime As String = "00:00:00"
     Dim filename As String = NullPath
+    Dim controlPoints As Integer = 0
+    Dim minDuration As Integer = 0
     'creamos una subrutina para cargar el archivo de video
     Private Sub PlayFile(ByVal url As String)
-        'habilitamos los controles de video
-        durationTrackBar.Enabled = True
-        timeTextBox.Enabled = True
-        setTimeButton.Enabled = True
+        'añadimos un punto a los 2 necesarios para iniciar los controles de video
+        controlPoints = controlPoints + 1
+        checkControls()
         'fijamos la url del video
-        player.URL = url
+        videoPlayer.URL = url
         'quitamos el UI del WMPlayer
-        player.uiMode = "None"
+        videoPlayer.uiMode = "None"
         'empezamos la visualizacion del video
-        player.Ctlcontrols.play()
+        videoPlayer.Ctlcontrols.play()
         'ponemos que el inicio sea el momento 00:00
-        player.Ctlcontrols.currentPosition = 0
+        videoPlayer.Ctlcontrols.currentPosition = 0
         'habilitamos el Timer para mostrar solamente 1 fotograma
         MyTimer.Enabled = True
     End Sub
+    'creamos una subrutina para cargar el archivo de la webcam
+    Private Sub WebcamFile(ByVal url As String)
+        'añadimos un punto a los 2 necesarios para iniciar los controles de video
+        controlPoints = controlPoints + 1
+        checkControls()
+        'fijamos la url del video
+        personalPlayer.URL = url
+        'quitamos el UI del WMPlayer
+        personalPlayer.uiMode = "None"
+        'empezamos la visualizacion del video
+        personalPlayer.Ctlcontrols.play()
+        'ponemos que el inicio sea el momento 00:00
+        personalPlayer.Ctlcontrols.currentPosition = 0
+        'habilitamos el Timer para mostrar solamente 1 fotograma
+        MyTimer.Enabled = True
+    End Sub
+    'creamos una subrutina para habilitar los controles de video una vez hayamos cargado ambos videos
+    Private Sub checkControls()
+        If controlPoints = 2 Then
+            'habilitamos los controles de video
+            durationTrackBar.Enabled = True
+            timeTextBox.Enabled = True
+            setTimeButton.Enabled = True
+        End If
+    End Sub
     'cuando haya un error a la hora de cargar el vídeo...
-    Private Sub player_MediaError(sender As Object, e As AxWMPLib._WMPOCXEvents_MediaErrorEvent) Handles player.MediaError
+    Private Sub player_MediaError(sender As Object, e As AxWMPLib._WMPOCXEvents_MediaErrorEvent) Handles videoPlayer.MediaError
         'informamos al usuario
         Msg = "Cannot play media file"
-        MsgForm.ShowDialog()
+        MsgForm.Show()
         Close()
     End Sub
     'cuandro abramos el Form...
     Private Sub DataViewerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'cargamos el Theme actual y quitamos el UI del player
+        'cargamos el Theme actual y quitamos el UI de los player
         Theme = CurrentTheme
         durationTrackBar.Theme = CurrentTheme
         timeTextBox.Theme = CurrentTheme
         setTimeButton.Theme = CurrentTheme
-        player.uiMode = "none"
-        'cargamos el video
-        If openVideoFile.ShowDialog = DialogResult.OK Then
-            PlayFile(openVideoFile.FileName)
-        End If
+        loadWebcamButton.Theme = CurrentTheme
+        loadVideoButton.Theme = CurrentTheme
+        eegViewerLabel.Theme = CurrentTheme
+        videoPlayer.uiMode = "none"
+        personalPlayer.uiMode = "none"
         'refrescamos el Form
         Refresh()
     End Sub
     'en cada tick del Timer...
     Private Sub MyTimer_Tick(sender As Object, e As EventArgs) Handles MyTimer.Tick
-        'intantamos detener el video mientras este se está ejecutando
-        While player.playState = WMPPlayState.wmppsPlaying
-            player.Ctlcontrols.pause()
+        'intantamos detener el VideoPLayer mientras este se está ejecutando
+        While videoPlayer.playState = WMPPlayState.wmppsPlaying
+            videoPlayer.Ctlcontrols.pause()
+        End While
+        'intantamos detener el WebcamPlayer mientras este se está ejecutando
+        While personalPlayer.playState = WMPPlayState.wmppsPlaying
+            personalPlayer.Ctlcontrols.pause()
         End While
         'evitamos errores de frames fantasma al mover de más la barra
         Try
-            durationTrackBar.Maximum = player.currentMedia.duration
+            minDuration = videoPlayer.currentMedia.duration
+            If minDuration > personalPlayer.currentMedia.duration Then
+                minDuration = personalPlayer.currentMedia.duration
+            End If
+            durationTrackBar.Maximum = minDuration
         Catch ex As Exception
         End Try
-        'si el video ya está parado...
-        If player.playState = WMPPlayState.wmppsPaused Then
+        'si el VideoPlayer ya está parado...
+        If videoPlayer.playState = WMPPlayState.wmppsPaused Then
             'mostramos el momento del video en el que estamos con un formato correcto (00:00:00)
             If timeTextBox.Text.Length < 9 Then
-                currentTime = "00:" & player.Ctlcontrols.currentPositionString
+                currentTime = "00:" & videoPlayer.Ctlcontrols.currentPositionString
             Else
-                currentTime = player.Ctlcontrols.currentPositionString
+                currentTime = videoPlayer.Ctlcontrols.currentPositionString
             End If
             timeTextBox.Text = currentTime
-            'y paramos el Timer
+            'y paramos el Timer para encender los botones de cargar video
+            loadVideoButton.Enabled = True
+            loadWebcamButton.Enabled = True
             MyTimer.Enabled = False
             'este If evita problemas estéticos cuando se carga el video
             If timeTextBox.Text = "00:" Then
@@ -78,17 +114,19 @@ Public Class DataViewerForm
         If durationTrackBar.Value = 0 Then
             Exit Sub
         End If
-        'si no, cambiamos el posicion del vídeo a donde marquemos con la TrackBar
-        player.Ctlcontrols.currentPosition = durationTrackBar.Value
+        'si no, cambiamos el posicion de los vídeos a donde marquemos con la TrackBar
+        videoPlayer.Ctlcontrols.currentPosition = durationTrackBar.Value
+        personalPlayer.Ctlcontrols.currentPosition = durationTrackBar.Value
         'iniciamos el vídeo desde ahi
-        player.Ctlcontrols.play()
+        videoPlayer.Ctlcontrols.play()
+        personalPlayer.Ctlcontrols.play()
         'congelamos el frame
         MyTimer.Enabled = True
         'refrescamos el Form
         Refresh()
     End Sub
     'creamos una subrutina para comprobar que el parametro obtenido tiene un formato correcto
-    Public Function isCorrectFormat(ByVal time As String) As Boolean
+    Private Function isCorrectFormat(ByVal time As String) As Boolean
         'si el string no existe o esta vacio, salimos de la subrutina
         If time = Nothing Or time = String.Empty Then
             Return False
@@ -108,7 +146,7 @@ Public Class DataViewerForm
         End If
     End Function
     'creamos una subrutina para pasar de String a Integer (fijo que ya hay algo que lo haga, pero no me apetecia buscarlo)
-    Public Function StringToInteger(ByVal time As String) As Integer
+    Private Function StringToInteger(ByVal time As String) As Integer
         Dim data As Integer = 0
         If IsNumeric(time) Then
             data = Integer.Parse(time)
@@ -146,19 +184,53 @@ Public Class DataViewerForm
             End If
         Next
         'si resulta que el tiempo introducido excede la duracion real del video, ponemos el ultimo frame
-        If finalTime > player.currentMedia.duration Then
-            player.Ctlcontrols.currentPosition = player.currentMedia.duration
-            durationTrackBar.Value = player.currentMedia.duration
+        If finalTime > minDuration Then
+            videoPlayer.Ctlcontrols.currentPosition = minDuration
+            personalPlayer.Ctlcontrols.currentPosition = minDuration
+            durationTrackBar.Value = minDuration
             'sino, cambiamos a donde se haya introducido
         Else
-            player.Ctlcontrols.currentPosition = finalTime
+            videoPlayer.Ctlcontrols.currentPosition = finalTime
+            personalPlayer.Ctlcontrols.currentPosition = finalTime
             durationTrackBar.Value = finalTime
         End If
         'iniciamos el vídeo desde ahi
-        player.Ctlcontrols.play()
+        videoPlayer.Ctlcontrols.play()
+        personalPlayer.Ctlcontrols.play()
         'congelamos el frame
         MyTimer.Enabled = True
         'refrescamos el Form
         Refresh()
+    End Sub
+    'creamos la rutina para cargar videos en el Video Player
+    Private Sub loadVideobutton_Click(sender As Object, e As EventArgs) Handles loadVideoButton.Click
+        'cargamos el video
+        If openVideoFile.ShowDialog = DialogResult.OK Then
+            loadVideoButton.Enabled = False
+            loadWebcamButton.Enabled = False
+            PlayFile(openVideoFile.FileName)
+        End If
+    End Sub
+    'creamos la rutina para cargar videos en el Webcam Player
+    Private Sub loadWebcamButton_Click(sender As Object, e As EventArgs) Handles loadWebcamButton.Click
+        'cargamos el video
+        If openVideoFile.ShowDialog = DialogResult.OK Then
+            loadVideoButton.Enabled = False
+            loadWebcamButton.Enabled = False
+            WebcamFile(openVideoFile.FileName)
+        End If
+    End Sub
+    'subrutina del timer para evitar bugs
+    Private Sub BugTimerTick(sender As Object, e As EventArgs) Handles BugsTimer.Tick
+        'evitamos bugs de botones que no se encienden al cargar el segundo video antes que el primero
+        If loadVideoButton.Enabled = False Or loadWebcamButton.Enabled = False Then
+            loadVideoButton.Enabled = True
+            loadWebcamButton.Enabled = True
+        End If
+        If videoPlayer.playState = WMPPlayState.wmppsPlaying Or personalPlayer.playState = WMPPlayState.wmppsPlaying Then
+
+            'evitamos que no se pare el segundo video al cargarlo despues del primero
+            MyTimer.Enabled = True
+        End If
     End Sub
 End Class

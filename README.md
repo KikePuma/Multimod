@@ -1,21 +1,27 @@
-"emotiv app 1.5" by Kike Puma
+"emotiv app 1.6" by Kike Puma
 
 ===========================================
 
-- ¡Nuevo botón para ver datos simultáneamente llamado Data Viewer!
+- Mejorado el DataViewer, con la posibilidad de ver simultáneamente dos videos
 
-- Incluye un nuevo Form que permite reproducir cualquier tipo de video
+(siendo en teoría uno de ellos el puesto al sujeto durante las lecturas de
 
-utilizando el Windows Media Player
+las ondas EEG y el otro, la grabación del propio sujeto mediante una webcam)
 
-- Si no se carga un video en el DataViewer; el TrackBar, el botón y el TextBox
+- Añadido un mapa de puntos de lectura de las EEG, carente de utilidad de
 
-se deshabilitan automáticamente
+momento
 
-- TrackBar insertado para poder cambiar el frame a mostrar de manera visual
+- Añadidas etiquetas para hacer más visual el DataViewer
 
-- TextBox insertado para poder cambiar el frame a mostrar de manera exacta
+- Ajustada sincronización de vídeos en dicho Form, cortando el más largo de
 
-- Arreglados los temas y diseños de los nuevos formularios y componentes
+ellos para que se adapte al de mínima duración y asi evitar fallos
 
-- El Video Player ya no reproduce de manera automática el archivo cargado
+- Solucionado error durante el Synchro Moment al cerrar el WebcamForm antes
+
+de ponerse a grabar
+
+- Comentado el DataViewerForm entero
+
+- Añadida la reproducción de vídeo al SynchroMode

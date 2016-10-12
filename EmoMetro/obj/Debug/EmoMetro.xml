@@ -32,6 +32,11 @@ EmoMetro
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:EmoMetro.My.Resources.Resources.dsensors">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:EmoMetro.My.Resources.Resources.dstop">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -43,6 +48,11 @@ EmoMetro
 </summary>
 </member>
 <member name="P:EmoMetro.My.Resources.Resources.lplay">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:EmoMetro.My.Resources.Resources.lsensors">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

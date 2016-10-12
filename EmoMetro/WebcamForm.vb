@@ -105,13 +105,15 @@ Public Class WebcamForm
     Private Sub recordButton_Click(sender As Object, e As EventArgs) Handles recordButton.Click
         startRecording()
     End Sub
-
+    'subrutina al cerrar el Form
     Private Sub WebcamForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         'apagamos la camara
         Try
             camera.Stop()
         Catch ex As Exception
         End Try
+        'cambiamos el texto del SynchroButton a uno apropiado
+        EmoApp.SynchroButton.Text = "START SYNCHRO"
     End Sub
 
     Private Sub WebcamForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

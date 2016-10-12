@@ -13,11 +13,11 @@ Public Class VideoPlayerForm
         MyTimer.Enabled = True
     End Sub
 
-    Private Sub playButton_Click(sender As Object, e As EventArgs) Handles playButton.Click
+    Public Sub playButton_Click(sender As Object, e As EventArgs) Handles playButton.Click
         player.Ctlcontrols.play()
     End Sub
 
-    Private Sub pauseButton_Click(sender As Object, e As EventArgs) Handles pauseButton.Click
+    Public Sub pauseButton_Click(sender As Object, e As EventArgs) Handles pauseButton.Click
         player.Ctlcontrols.pause()
     End Sub
 
@@ -31,6 +31,9 @@ Public Class VideoPlayerForm
             player.Ctlcontrols.pause()
         End While
         If player.playState = WMPPlayState.wmppsPaused Then
+            player.Ctlcontrols.currentPosition = 0
+            player.Ctlcontrols.play()
+            player.Ctlcontrols.pause()
             MyTimer.Enabled = False
         End If
     End Sub

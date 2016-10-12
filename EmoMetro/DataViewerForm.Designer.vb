@@ -26,20 +26,28 @@ Partial Class DataViewerForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DataViewerForm))
         Me.durationTrackBar = New MetroFramework.Controls.MetroTrackBar()
         Me.openVideoFile = New System.Windows.Forms.OpenFileDialog()
-        Me.player = New AxWMPLib.AxWindowsMediaPlayer()
+        Me.videoPlayer = New AxWMPLib.AxWindowsMediaPlayer()
         Me.MyTimer = New System.Windows.Forms.Timer(Me.components)
         Me.timeTextBox = New MetroFramework.Controls.MetroTextBox()
         Me.setTimeButton = New MetroFramework.Controls.MetroButton()
-        CType(Me.player, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.personalPlayer = New AxWMPLib.AxWindowsMediaPlayer()
+        Me.eegViewer = New System.Windows.Forms.PictureBox()
+        Me.eegViewerLabel = New MetroFramework.Controls.MetroLabel()
+        Me.loadVideoButton = New MetroFramework.Controls.MetroButton()
+        Me.loadWebcamButton = New MetroFramework.Controls.MetroButton()
+        Me.BugsTimer = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.videoPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.personalPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.eegViewer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'durationTrackBar
         '
         Me.durationTrackBar.BackColor = System.Drawing.Color.Transparent
         Me.durationTrackBar.Enabled = False
-        Me.durationTrackBar.Location = New System.Drawing.Point(239, 31)
+        Me.durationTrackBar.Location = New System.Drawing.Point(23, 63)
         Me.durationTrackBar.Name = "durationTrackBar"
-        Me.durationTrackBar.Size = New System.Drawing.Size(298, 23)
+        Me.durationTrackBar.Size = New System.Drawing.Size(181, 23)
         Me.durationTrackBar.TabIndex = 1
         Me.durationTrackBar.Text = "MetroTrackBar1"
         Me.durationTrackBar.Theme = MetroFramework.MetroThemeStyle.Dark
@@ -49,14 +57,14 @@ Partial Class DataViewerForm
         '
         Me.openVideoFile.FileName = "\dev"
         '
-        'player
+        'videoPlayer
         '
-        Me.player.Enabled = True
-        Me.player.Location = New System.Drawing.Point(23, 71)
-        Me.player.Name = "player"
-        Me.player.OcxState = CType(resources.GetObject("player.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.player.Size = New System.Drawing.Size(640, 480)
-        Me.player.TabIndex = 2
+        Me.videoPlayer.Enabled = True
+        Me.videoPlayer.Location = New System.Drawing.Point(542, 63)
+        Me.videoPlayer.Name = "videoPlayer"
+        Me.videoPlayer.OcxState = CType(resources.GetObject("videoPlayer.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.videoPlayer.Size = New System.Drawing.Size(400, 300)
+        Me.videoPlayer.TabIndex = 2
         '
         'MyTimer
         '
@@ -78,7 +86,7 @@ Partial Class DataViewerForm
         Me.timeTextBox.CustomButton.Visible = False
         Me.timeTextBox.Enabled = False
         Me.timeTextBox.Lines = New String() {"00:00:00"}
-        Me.timeTextBox.Location = New System.Drawing.Point(543, 31)
+        Me.timeTextBox.Location = New System.Drawing.Point(210, 63)
         Me.timeTextBox.MaxLength = 9
         Me.timeTextBox.Name = "timeTextBox"
         Me.timeTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -98,22 +106,80 @@ Partial Class DataViewerForm
         'setTimeButton
         '
         Me.setTimeButton.Enabled = False
-        Me.setTimeButton.Location = New System.Drawing.Point(599, 30)
+        Me.setTimeButton.Location = New System.Drawing.Point(266, 63)
         Me.setTimeButton.Name = "setTimeButton"
-        Me.setTimeButton.Size = New System.Drawing.Size(64, 23)
+        Me.setTimeButton.Size = New System.Drawing.Size(86, 23)
         Me.setTimeButton.TabIndex = 4
         Me.setTimeButton.Text = "set time"
         Me.setTimeButton.Theme = MetroFramework.MetroThemeStyle.Dark
         Me.setTimeButton.UseSelectable = True
         '
+        'personalPlayer
+        '
+        Me.personalPlayer.Enabled = True
+        Me.personalPlayer.Location = New System.Drawing.Point(542, 396)
+        Me.personalPlayer.Name = "personalPlayer"
+        Me.personalPlayer.OcxState = CType(resources.GetObject("personalPlayer.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.personalPlayer.Size = New System.Drawing.Size(400, 300)
+        Me.personalPlayer.TabIndex = 5
+        '
+        'eegViewer
+        '
+        Me.eegViewer.Image = Global.EmoMetro.My.Resources.Resources.dsensors
+        Me.eegViewer.Location = New System.Drawing.Point(33, 101)
+        Me.eegViewer.Name = "eegViewer"
+        Me.eegViewer.Size = New System.Drawing.Size(481, 517)
+        Me.eegViewer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.eegViewer.TabIndex = 9
+        Me.eegViewer.TabStop = False
+        '
+        'eegViewerLabel
+        '
+        Me.eegViewerLabel.AutoSize = True
+        Me.eegViewerLabel.Location = New System.Drawing.Point(392, 127)
+        Me.eegViewerLabel.Name = "eegViewerLabel"
+        Me.eegViewerLabel.Size = New System.Drawing.Size(122, 20)
+        Me.eegViewerLabel.TabIndex = 10
+        Me.eegViewerLabel.Text = "EEG Signal Viewer"
+        Me.eegViewerLabel.Theme = MetroFramework.MetroThemeStyle.Dark
+        '
+        'loadVideoButton
+        '
+        Me.loadVideoButton.Location = New System.Drawing.Point(832, 36)
+        Me.loadVideoButton.Name = "loadVideoButton"
+        Me.loadVideoButton.Size = New System.Drawing.Size(110, 21)
+        Me.loadVideoButton.TabIndex = 12
+        Me.loadVideoButton.Text = "Video Player"
+        Me.loadVideoButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.loadVideoButton.UseSelectable = True
+        '
+        'loadWebcamButton
+        '
+        Me.loadWebcamButton.Location = New System.Drawing.Point(832, 369)
+        Me.loadWebcamButton.Name = "loadWebcamButton"
+        Me.loadWebcamButton.Size = New System.Drawing.Size(110, 21)
+        Me.loadWebcamButton.TabIndex = 13
+        Me.loadWebcamButton.Text = "Webcam Player"
+        Me.loadWebcamButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.loadWebcamButton.UseSelectable = True
+        '
+        'BugsTimer
+        '
+        Me.BugsTimer.Enabled = True
+        '
         'DataViewerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(965, 574)
+        Me.ClientSize = New System.Drawing.Size(965, 719)
+        Me.Controls.Add(Me.loadWebcamButton)
+        Me.Controls.Add(Me.loadVideoButton)
+        Me.Controls.Add(Me.eegViewerLabel)
+        Me.Controls.Add(Me.eegViewer)
+        Me.Controls.Add(Me.personalPlayer)
         Me.Controls.Add(Me.setTimeButton)
         Me.Controls.Add(Me.timeTextBox)
-        Me.Controls.Add(Me.player)
+        Me.Controls.Add(Me.videoPlayer)
         Me.Controls.Add(Me.durationTrackBar)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -121,14 +187,23 @@ Partial Class DataViewerForm
         Me.Style = MetroFramework.MetroColorStyle.Pink
         Me.Text = "DataViewerForm"
         Me.Theme = MetroFramework.MetroThemeStyle.Dark
-        CType(Me.player, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.videoPlayer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.personalPlayer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.eegViewer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents durationTrackBar As MetroFramework.Controls.MetroTrackBar
     Friend WithEvents openVideoFile As OpenFileDialog
-    Friend WithEvents player As AxWMPLib.AxWindowsMediaPlayer
+    Friend WithEvents videoPlayer As AxWMPLib.AxWindowsMediaPlayer
     Friend WithEvents MyTimer As Timer
     Friend WithEvents timeTextBox As MetroFramework.Controls.MetroTextBox
     Friend WithEvents setTimeButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents personalPlayer As AxWMPLib.AxWindowsMediaPlayer
+    Friend WithEvents eegViewer As PictureBox
+    Friend WithEvents eegViewerLabel As MetroFramework.Controls.MetroLabel
+    Friend WithEvents loadVideoButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents loadWebcamButton As MetroFramework.Controls.MetroButton
+    Friend WithEvents BugsTimer As Timer
 End Class

@@ -197,6 +197,8 @@
     <None Include="bin\Debug\assets_\lpause.png" />
     <None Include="bin\Debug\assets_\lplay.png" />
     <None Include="bin\Debug\assets_\lstop.png" />
+    <None Include="bin\Debug\assets_\dsensors.png" />
+    <None Include="bin\Debug\assets_\lsensors.png" />
     <Content Include="swresample-0.dll" />
     <Content Include="swscale-2.dll" />
   </ItemGroup>
