@@ -38,7 +38,7 @@ Partial Class EmoApp
         Me.ThemeCheckBox.Location = New System.Drawing.Point(391, 470)
         Me.ThemeCheckBox.Name = "ThemeCheckBox"
         Me.ThemeCheckBox.Size = New System.Drawing.Size(95, 17)
-        Me.ThemeCheckBox.Style = MetroFramework.MetroColorStyle.Red
+        Me.ThemeCheckBox.Style = MetroFramework.MetroColorStyle.Green
         Me.ThemeCheckBox.TabIndex = 1
         Me.ThemeCheckBox.Text = "Light Theme"
         Me.ThemeCheckBox.Theme = MetroFramework.MetroThemeStyle.Dark
