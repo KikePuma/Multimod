@@ -36,9 +36,13 @@ Partial Class DataViewerForm
         Me.loadVideoButton = New MetroFramework.Controls.MetroButton()
         Me.loadWebcamButton = New MetroFramework.Controls.MetroButton()
         Me.BugsTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.csvView = New System.Windows.Forms.DataGridView()
+        Me.openCsvFile = New System.Windows.Forms.OpenFileDialog()
+        Me.loadCsvButton = New MetroFramework.Controls.MetroButton()
         CType(Me.videoPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.personalPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.eegViewer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.csvView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'durationTrackBar
@@ -167,11 +171,39 @@ Partial Class DataViewerForm
         '
         Me.BugsTimer.Enabled = True
         '
+        'csvView
+        '
+        Me.csvView.BackgroundColor = System.Drawing.SystemColors.ControlText
+        Me.csvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.csvView.Location = New System.Drawing.Point(33, 600)
+        Me.csvView.Name = "csvView"
+        Me.csvView.RowTemplate.Height = 24
+        Me.csvView.Size = New System.Drawing.Size(481, 96)
+        Me.csvView.TabIndex = 14
+        '
+        'openCsvFile
+        '
+        Me.openCsvFile.DefaultExt = "csv"
+        Me.openCsvFile.FileName = "excel"
+        Me.openCsvFile.Filter = "CSV files (*.csv)|*.CSV"
+        '
+        'loadCsvButton
+        '
+        Me.loadCsvButton.Location = New System.Drawing.Point(404, 573)
+        Me.loadCsvButton.Name = "loadCsvButton"
+        Me.loadCsvButton.Size = New System.Drawing.Size(110, 21)
+        Me.loadCsvButton.TabIndex = 15
+        Me.loadCsvButton.Text = "CSV Reader"
+        Me.loadCsvButton.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.loadCsvButton.UseSelectable = True
+        '
         'DataViewerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(965, 719)
+        Me.Controls.Add(Me.loadCsvButton)
+        Me.Controls.Add(Me.csvView)
         Me.Controls.Add(Me.loadWebcamButton)
         Me.Controls.Add(Me.loadVideoButton)
         Me.Controls.Add(Me.eegViewerLabel)
@@ -190,6 +222,7 @@ Partial Class DataViewerForm
         CType(Me.videoPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.personalPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.eegViewer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.csvView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -206,4 +239,7 @@ Partial Class DataViewerForm
     Friend WithEvents loadVideoButton As MetroFramework.Controls.MetroButton
     Friend WithEvents loadWebcamButton As MetroFramework.Controls.MetroButton
     Friend WithEvents BugsTimer As Timer
+    Friend WithEvents csvView As DataGridView
+    Friend WithEvents openCsvFile As OpenFileDialog
+    Friend WithEvents loadCsvButton As MetroFramework.Controls.MetroButton
 End Class

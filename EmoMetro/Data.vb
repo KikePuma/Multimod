@@ -1,8 +1,8 @@
 ﻿Module Data
 
-    '' ==========================
-    '' || @ Kike 'Puma' Fontán ||
-    '' ==========================
+    '' =========================
+    '' || @Kike 'Puma' Fontán ||
+    '' =========================
 
     '' ## STYLE VARIABLES ##
     Public DarkTheme As Boolean = True

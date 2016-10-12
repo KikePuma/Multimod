@@ -5,7 +5,7 @@
             'cambiamos al Light Theme cuando tengamos el Dark
             CurrentTheme = MetroFramework.MetroThemeStyle.Light
             ''MetroTextColor = MetroFramework.MetroColors.Black
-            ''MetroBackColor = MetroFramework.MetroColors.White
+            MetroBackColor = MetroFramework.MetroColors.White
             DarkTheme = False
             VideoPlayerForm.playButton.Image = My.Resources.lplay
             VideoPlayerForm.pauseButton.Image = My.Resources.lpause
@@ -15,7 +15,7 @@
             'y lo mismo para a la inversa
             CurrentTheme = MetroFramework.MetroThemeStyle.Dark
             ''MetroTextColor = MetroFramework.MetroColors.White
-            ''MetroBackColor = MetroFramework.MetroColors.Black
+            MetroBackColor = MetroFramework.MetroColors.Black
             DarkTheme = True
             VideoPlayerForm.playButton.Image = My.Resources.dplay
             VideoPlayerForm.pauseButton.Image = My.Resources.dpause
@@ -48,6 +48,8 @@
         DataViewerForm.loadVideoButton.Theme = CurrentTheme
         DataViewerForm.loadWebcamButton.Theme = CurrentTheme
         DataViewerForm.eegViewerLabel.Theme = CurrentTheme
+        DataViewerForm.csvView.BackgroundColor = MetroBackColor
+        DataViewerForm.loadCsvButton.Theme = CurrentTheme
         'y refrescamos todos ellos
         Me.Refresh()
         WebcamForm.Refresh()

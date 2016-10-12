@@ -5,8 +5,94 @@ Public Class DataViewerForm
     'definimos las variables a usar
     Dim currentTime As String = "00:00:00"
     Dim filename As String = NullPath
+    Dim csvPath As String = ""
     Dim controlPoints As Integer = 0
     Dim minDuration As Integer = 0
+    'creamos una subrutina para escribir el header del CSV
+    Private Sub WriteHeader(ByVal csvReader As IO.StreamReader, ByVal fullLine As String, ByVal splitLine As String(), ByVal separator As String)
+        'leemos la linea entera
+        fullLine = csvReader.ReadLine()
+        'la separamos en columnas
+        splitLine = Split(fullLine, separator)
+        'definimos el numero de columnas que tendrá el DataGridView
+        csvView.ColumnCount = splitLine.Length - 1
+        'rellenamos las columnas con los datos que tenemos
+        csvView.Rows.Add(splitLine)
+    End Sub
+    'creamos una subrutina para escribir los datos del CSV
+    Private Sub WriteCSV(ByVal csvReader As IO.StreamReader)
+        Dim fullLine As String = ""
+        Dim splitLine As String()
+        Dim separator As String = ","
+        Dim readerMode As String = "line"
+
+        WriteHeader(csvReader, fullLine, splitLine, separator)
+        If readerMode = "full" Then
+            ' ###### LEER TODO EL CSV ######
+            'creamos un bucle mientras haya caracteres
+            Do While csvReader.Peek() <> -1
+                Try
+                    'leemos la linea entera
+                    fullLine = csvReader.ReadLine()
+                    'la separamos en columnas
+                    splitLine = Split(fullLine, separator)
+                    'definimos el numero de columnas que tendrá el DataGridView
+                    csvView.ColumnCount = splitLine.Length - 1
+                    'rellenamos las columnas con los datos que tenemos
+                    csvView.Rows.Add(splitLine)
+                Catch ex As Exception
+                    Console.WriteLine("Full error: " + ex.ToString)
+                End Try
+            Loop
+        ElseIf readerMode = "line" Then
+            ' ### LEER UNA LINEA DEL CSV ###
+            'definimos las variables necesarias
+            Dim csvTime As String()
+            'creamos un bucle mientras haya caracteres
+            Do While csvReader.Peek() <> -1
+                'leemos la linea entera
+                fullLine = csvReader.ReadLine()
+                'la separamos en columnas
+                splitLine = Split(fullLine, separator)
+                'leemos el tiempo a mostrar y lo separamos
+                csvTime = Split(timeTextBox.Text, ":")
+                'buscamos todas aquellas filas en las que coincidan los segundos
+                If Not splitLine(0).Length = 2 Then
+                    splitLine(0) = "0" + splitLine(0)
+                End If
+                If splitLine(0) = csvTime(2) Then
+                    'definimos el numero de columnas que tendrá el DataGridView
+                    csvView.ColumnCount = splitLine.Length - 1
+                    'rellenamos las columnas con los datos que tenemos
+                    csvView.Rows.Add(splitLine)
+                End If
+            Loop
+        End If
+    End Sub
+    'creamos una subrutina para cargar el CSV
+    Private Sub loadCSV(ByVal url As String)
+        'borramos el CSV ya existente
+        Try
+            csvView.Rows.Clear()
+        Catch ex As Exception
+        End Try
+        Try
+            'definimos las variables necesarias
+            Dim csv As String = url
+
+            'verificamos que existe el csv
+            If IO.File.Exists(csv) = True Then
+                'creamos el lector del csv
+                Dim csvReader As New IO.StreamReader(csv)
+                'escribimos el encabezado y leemos los datos del csv
+                WriteCSV(csvReader)
+            Else
+                    MetroFramework.MetroMessageBox.Show(Me, "File does not exist!", "File error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Import Error: " + ex.Message)
+        End Try
+    End Sub
     'creamos una subrutina para cargar el archivo de video
     Private Sub PlayFile(ByVal url As String)
         'añadimos un punto a los 2 necesarios para iniciar los controles de video
@@ -64,9 +150,19 @@ Public Class DataViewerForm
         setTimeButton.Theme = CurrentTheme
         loadWebcamButton.Theme = CurrentTheme
         loadVideoButton.Theme = CurrentTheme
+        loadCsvButton.Theme = CurrentTheme
         eegViewerLabel.Theme = CurrentTheme
+        csvView.BackgroundColor = MetroBackColor
+        If DarkTheme Then
+            eegViewer.Image = My.Resources.dsensors
+        Else
+            eegViewer.Image = My.Resources.lsensors
+        End If
         videoPlayer.uiMode = "none"
         personalPlayer.uiMode = "none"
+        'definimos que solo se pueda seleccionar un archivo por Opener
+        openCsvFile.Multiselect = False
+        openVideoFile.Multiselect = False
         'refrescamos el Form
         Refresh()
     End Sub
@@ -120,6 +216,8 @@ Public Class DataViewerForm
         'iniciamos el vídeo desde ahi
         videoPlayer.Ctlcontrols.play()
         personalPlayer.Ctlcontrols.play()
+        'cambiamos los valores mostrados en el CSV
+        loadCSV(csvPath)
         'congelamos el frame
         MyTimer.Enabled = True
         'refrescamos el Form
@@ -231,6 +329,14 @@ Public Class DataViewerForm
 
             'evitamos que no se pare el segundo video al cargarlo despues del primero
             MyTimer.Enabled = True
+        End If
+    End Sub
+    'creamos la subrutina para mostrar el csv
+    Private Sub loadCsvButton_Click(sender As Object, e As EventArgs) Handles loadCsvButton.Click
+        'abrimos el archivo CSV
+        If openCsvFile.ShowDialog() = DialogResult.OK Then
+            csvPath = openCsvFile.FileName
+            loadCSV(csvPath)
         End If
     End Sub
 End Class

@@ -1,27 +1,17 @@
-"emotiv app 1.6" by Kike Puma
+"emotiv app 1.7" by Kike Puma
 
 ===========================================
 
-- Mejorado el DataViewer, con la posibilidad de ver simultáneamente dos videos
+- Añadida lectura de los CSV en el DataViewer
 
-(siendo en teoría uno de ellos el puesto al sujeto durante las lecturas de
+- Añadidos dos modos diferentes, únicamente cambiables desde
 
-las ondas EEG y el otro, la grabación del propio sujeto mediante una webcam)
+el código de momento: full & line
 
-- Añadido un mapa de puntos de lectura de las EEG, carente de utilidad de
+- Modo full para lecturas de csv. Muestra el csv entero
 
-momento
+- Modo line para lecturas de csv. Muestra las filas del csv que
 
-- Añadidas etiquetas para hacer más visual el DataViewer
+coincidan con los segundos de los frames mostrados
 
-- Ajustada sincronización de vídeos en dicho Form, cortando el más largo de
-
-ellos para que se adapte al de mínima duración y asi evitar fallos
-
-- Solucionado error durante el Synchro Moment al cerrar el WebcamForm antes
-
-de ponerse a grabar
-
-- Comentado el DataViewerForm entero
-
-- Añadida la reproducción de vídeo al SynchroMode
+- Añadida nueva versión del programa EEGWriter: la 1.1
