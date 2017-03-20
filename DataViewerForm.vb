@@ -19,6 +19,19 @@ Public Class DataViewerForm
         'rellenamos las columnas con los datos que tenemos
         csvView.Rows.Add(splitLine)
     End Sub
+
+    Private Sub WriteTags()
+        Try
+            Dim app As Microsoft.Office.Interop.Excel.Application
+            app = New Microsoft.Office.Interop.Excel.Application
+            app.Workbooks.Open(csvPath)
+        Catch ex As Exception
+            EtiquetaButton.Text = csvPath
+        End Try
+
+    End Sub
+
+
     'creamos una subrutina para escribir los datos del CSV
     Private Sub WriteCSV(ByVal csvReader As IO.StreamReader)
         Dim fullLine As String = ""
@@ -87,7 +100,7 @@ Public Class DataViewerForm
                 'escribimos el encabezado y leemos los datos del csv
                 WriteCSV(csvReader)
             Else
-                    MetroFramework.MetroMessageBox.Show(Me, "File does not exist!", "File error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MetroFramework.MetroMessageBox.Show(Me, "File does not exist!", "File error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
             Console.WriteLine("Import Error: " + ex.Message)
@@ -340,7 +353,18 @@ Public Class DataViewerForm
         End If
     End Sub
 
-    Private Sub videoPlayer_Enter(sender As Object, e As EventArgs) Handles videoPlayer.Enter
-
+    Private Sub EtiquetaButton_Click(sender As Object, e As EventArgs) Handles EtiquetaButton.Click
+        If EtiquetaButton.Text = "Añadir Etiqueta" Then
+            If csvPath = "" Then
+                Exit Sub
+            End If
+            EtiquetaButton.Text = "Aceptar"
+            MetroTextBox1.Text = ""
+            MetroTextBox1.Visible = True
+        ElseIf EtiquetaButton.Text = "Aceptar" Then
+            EtiquetaButton.Text = "Añadir Etiqueta"
+            MetroTextBox1.Visible = False
+            WriteTags()
+        End If
     End Sub
 End Class
