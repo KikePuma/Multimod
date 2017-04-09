@@ -1,12 +1,12 @@
 # MULTIMOD
 
-[![N|Solid](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)]() [![N|Solid](https://travis-ci.org/KikePuma/multimod_.svg?branch=master)]()
+[![N|Solid](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)]() [![N|Solid](https://travis-ci.org/KikePuma/Multimod.svg?branch=master)]()
 
 Software dedicated to the synchronization of peripherals.
 
   - Recording
   - Synchronization
-  - Visualizaci√≥n
+  - VisualizaciÛn
 
 ## Features!
 
@@ -37,7 +37,7 @@ Multimod uses a number of projects and DLLs to work properly:
 
 | Name | Position | Contact |
 | ------ | ------ | ------ |
-| Katia Rol√°n | Original Idea | [LinkedIn](https://linkedin.com/in/katiarolan) |
+| Katia Rol·n | Original Idea | [LinkedIn](https://linkedin.com/in/katiarolan) |
 | Kike Puma | Developer | [LinkedIn](https://linkedin.com/in/kikepuma) |
 | Oscar Moldes | Developer | [LinkedIn](https://www.linkedin.com/in/oscar-moldes-4a72905a/) |
 
@@ -48,4 +48,4 @@ Multimod uses a number of projects and DLLs to work properly:
 License
 ----
 
-Read [LICENSE](https://github.com/KikePuma/multimod_/blob/master/LICENSE) file.
+Read [LICENSE](https://github.com/KikePuma/Multimod/blob/master/LICENSE) file.
