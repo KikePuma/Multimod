@@ -38,45 +38,39 @@ Partial Class VideoPlayerForm
         '
         'player
         '
-        Me.player.Dock = System.Windows.Forms.DockStyle.Fill
         Me.player.Enabled = True
-        Me.player.Location = New System.Drawing.Point(15, 60)
-        Me.player.Margin = New System.Windows.Forms.Padding(2)
+        Me.player.Location = New System.Drawing.Point(23, 71)
         Me.player.Name = "player"
         Me.player.OcxState = CType(resources.GetObject("player.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.player.Size = New System.Drawing.Size(484, 390)
+        Me.player.Size = New System.Drawing.Size(640, 480)
         Me.player.TabIndex = 0
-        Me.player.UseWaitCursor = True
         '
         'pauseButton
         '
-        Me.pauseButton.Image = Global.Multimod.My.Resources.Resources.dpause
-        Me.pauseButton.Location = New System.Drawing.Point(455, 24)
-        Me.pauseButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.pauseButton.Image = My.Resources.Resources.dpause
+        Me.pauseButton.Location = New System.Drawing.Point(607, 30)
         Me.pauseButton.Name = "pauseButton"
-        Me.pauseButton.Size = New System.Drawing.Size(19, 20)
+        Me.pauseButton.Size = New System.Drawing.Size(25, 25)
         Me.pauseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pauseButton.TabIndex = 3
         Me.pauseButton.TabStop = False
         '
         'playButton
         '
-        Me.playButton.Image = Global.Multimod.My.Resources.Resources.dplay
-        Me.playButton.Location = New System.Drawing.Point(432, 24)
-        Me.playButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.playButton.Image = My.Resources.Resources.dplay
+        Me.playButton.Location = New System.Drawing.Point(576, 30)
         Me.playButton.Name = "playButton"
-        Me.playButton.Size = New System.Drawing.Size(19, 20)
+        Me.playButton.Size = New System.Drawing.Size(25, 25)
         Me.playButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.playButton.TabIndex = 2
         Me.playButton.TabStop = False
         '
         'stopButton
         '
-        Me.stopButton.Image = Global.Multimod.My.Resources.Resources.dstop
-        Me.stopButton.Location = New System.Drawing.Point(478, 24)
-        Me.stopButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.stopButton.Image = My.Resources.Resources.dstop
+        Me.stopButton.Location = New System.Drawing.Point(638, 30)
         Me.stopButton.Name = "stopButton"
-        Me.stopButton.Size = New System.Drawing.Size(19, 20)
+        Me.stopButton.Size = New System.Drawing.Size(25, 25)
         Me.stopButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.stopButton.TabIndex = 1
         Me.stopButton.TabStop = False
@@ -92,19 +86,16 @@ Partial Class VideoPlayerForm
         'VideoPlayerForm
         '
         Me.ApplyImageInvert = True
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(514, 466)
+        Me.ClientSize = New System.Drawing.Size(686, 574)
         Me.Controls.Add(Me.pauseButton)
         Me.Controls.Add(Me.playButton)
         Me.Controls.Add(Me.stopButton)
         Me.Controls.Add(Me.player)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "VideoPlayerForm"
-        Me.Padding = New System.Windows.Forms.Padding(15, 60, 15, 16)
         Me.Style = MetroFramework.MetroColorStyle.Orange
         Me.Text = "VideoPlayer"
         Me.Theme = MetroFramework.MetroThemeStyle.Dark

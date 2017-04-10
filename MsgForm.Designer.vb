@@ -29,10 +29,9 @@ Partial Class MsgForm
         '
         Me.MsgLabel.CausesValidation = False
         Me.MsgLabel.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MsgLabel.Location = New System.Drawing.Point(17, 49)
-        Me.MsgLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.MsgLabel.Location = New System.Drawing.Point(23, 60)
         Me.MsgLabel.Name = "MsgLabel"
-        Me.MsgLabel.Size = New System.Drawing.Size(194, 58)
+        Me.MsgLabel.Size = New System.Drawing.Size(259, 71)
         Me.MsgLabel.Style = MetroFramework.MetroColorStyle.Red
         Me.MsgLabel.TabIndex = 0
         Me.MsgLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -40,15 +39,13 @@ Partial Class MsgForm
         '
         'MsgForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(229, 123)
+        Me.ClientSize = New System.Drawing.Size(305, 151)
         Me.Controls.Add(Me.MsgLabel)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MsgForm"
-        Me.Padding = New System.Windows.Forms.Padding(15, 49, 15, 16)
         Me.ShowIcon = False
         Me.Style = MetroFramework.MetroColorStyle.Red
         Me.Text = "Message"

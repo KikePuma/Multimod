@@ -22,7 +22,6 @@ Partial Class Multimod
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Multimod))
         Me.ThemeCheckBox = New MetroFramework.Controls.MetroCheckBox()
         Me.PraatButton = New MetroFramework.Controls.MetroButton()
         Me.ElanButton = New MetroFramework.Controls.MetroButton()
@@ -40,10 +39,10 @@ Partial Class Multimod
         Me.ThemeCheckBox.AutoSize = True
         Me.ThemeCheckBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         Me.ThemeCheckBox.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ThemeCheckBox.Location = New System.Drawing.Point(203, 272)
-        Me.ThemeCheckBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.ThemeCheckBox.Location = New System.Drawing.Point(271, 335)
+        Me.ThemeCheckBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ThemeCheckBox.Name = "ThemeCheckBox"
-        Me.ThemeCheckBox.Size = New System.Drawing.Size(90, 15)
+        Me.ThemeCheckBox.Size = New System.Drawing.Size(95, 17)
         Me.ThemeCheckBox.Style = MetroFramework.MetroColorStyle.Green
         Me.ThemeCheckBox.TabIndex = 1
         Me.ThemeCheckBox.Text = "Light Theme"
@@ -52,10 +51,10 @@ Partial Class Multimod
         '
         'PraatButton
         '
-        Me.PraatButton.Location = New System.Drawing.Point(14, 261)
-        Me.PraatButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.PraatButton.Location = New System.Drawing.Point(19, 321)
+        Me.PraatButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PraatButton.Name = "PraatButton"
-        Me.PraatButton.Size = New System.Drawing.Size(83, 25)
+        Me.PraatButton.Size = New System.Drawing.Size(111, 31)
         Me.PraatButton.Style = MetroFramework.MetroColorStyle.Red
         Me.PraatButton.TabIndex = 2
         Me.PraatButton.Text = "PRAAT"
@@ -64,10 +63,10 @@ Partial Class Multimod
         '
         'ElanButton
         '
-        Me.ElanButton.Location = New System.Drawing.Point(102, 261)
-        Me.ElanButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.ElanButton.Location = New System.Drawing.Point(136, 321)
+        Me.ElanButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ElanButton.Name = "ElanButton"
-        Me.ElanButton.Size = New System.Drawing.Size(83, 25)
+        Me.ElanButton.Size = New System.Drawing.Size(111, 31)
         Me.ElanButton.Style = MetroFramework.MetroColorStyle.Red
         Me.ElanButton.TabIndex = 3
         Me.ElanButton.Text = "ELAN"
@@ -80,10 +79,10 @@ Partial Class Multimod
         '
         'WebcamButton
         '
-        Me.WebcamButton.Location = New System.Drawing.Point(14, 231)
-        Me.WebcamButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.WebcamButton.Location = New System.Drawing.Point(19, 284)
+        Me.WebcamButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.WebcamButton.Name = "WebcamButton"
-        Me.WebcamButton.Size = New System.Drawing.Size(83, 25)
+        Me.WebcamButton.Size = New System.Drawing.Size(111, 31)
         Me.WebcamButton.Style = MetroFramework.MetroColorStyle.Red
         Me.WebcamButton.TabIndex = 4
         Me.WebcamButton.Text = "WEBCAM"
@@ -92,10 +91,10 @@ Partial Class Multimod
         '
         'EmotivButton
         '
-        Me.EmotivButton.Location = New System.Drawing.Point(102, 231)
-        Me.EmotivButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.EmotivButton.Location = New System.Drawing.Point(136, 284)
+        Me.EmotivButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.EmotivButton.Name = "EmotivButton"
-        Me.EmotivButton.Size = New System.Drawing.Size(83, 25)
+        Me.EmotivButton.Size = New System.Drawing.Size(111, 31)
         Me.EmotivButton.Style = MetroFramework.MetroColorStyle.Red
         Me.EmotivButton.TabIndex = 5
         Me.EmotivButton.Text = "EMOTIV"
@@ -104,10 +103,10 @@ Partial Class Multimod
         '
         'SynchroButton
         '
-        Me.SynchroButton.Location = New System.Drawing.Point(14, 67)
-        Me.SynchroButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.SynchroButton.Location = New System.Drawing.Point(19, 82)
+        Me.SynchroButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SynchroButton.Name = "SynchroButton"
-        Me.SynchroButton.Size = New System.Drawing.Size(252, 106)
+        Me.SynchroButton.Size = New System.Drawing.Size(336, 130)
         Me.SynchroButton.Style = MetroFramework.MetroColorStyle.Red
         Me.SynchroButton.TabIndex = 6
         Me.SynchroButton.Text = "START SYNCHRO"
@@ -116,10 +115,10 @@ Partial Class Multimod
         '
         'AudioPlayerButton
         '
-        Me.AudioPlayerButton.Location = New System.Drawing.Point(102, 201)
-        Me.AudioPlayerButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.AudioPlayerButton.Location = New System.Drawing.Point(136, 247)
+        Me.AudioPlayerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AudioPlayerButton.Name = "AudioPlayerButton"
-        Me.AudioPlayerButton.Size = New System.Drawing.Size(83, 27)
+        Me.AudioPlayerButton.Size = New System.Drawing.Size(111, 33)
         Me.AudioPlayerButton.Style = MetroFramework.MetroColorStyle.Red
         Me.AudioPlayerButton.TabIndex = 7
         Me.AudioPlayerButton.Text = "AUDIO PLAYER"
@@ -128,10 +127,10 @@ Partial Class Multimod
         '
         'VideoPlayerButton
         '
-        Me.VideoPlayerButton.Location = New System.Drawing.Point(14, 201)
-        Me.VideoPlayerButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.VideoPlayerButton.Location = New System.Drawing.Point(19, 247)
+        Me.VideoPlayerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.VideoPlayerButton.Name = "VideoPlayerButton"
-        Me.VideoPlayerButton.Size = New System.Drawing.Size(83, 27)
+        Me.VideoPlayerButton.Size = New System.Drawing.Size(111, 33)
         Me.VideoPlayerButton.Style = MetroFramework.MetroColorStyle.Red
         Me.VideoPlayerButton.TabIndex = 8
         Me.VideoPlayerButton.Text = "VIDEO PLAYER"
@@ -140,10 +139,10 @@ Partial Class Multimod
         '
         'DataViewerButton
         '
-        Me.DataViewerButton.Location = New System.Drawing.Point(190, 201)
-        Me.DataViewerButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.DataViewerButton.Location = New System.Drawing.Point(253, 247)
+        Me.DataViewerButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataViewerButton.Name = "DataViewerButton"
-        Me.DataViewerButton.Size = New System.Drawing.Size(76, 55)
+        Me.DataViewerButton.Size = New System.Drawing.Size(102, 68)
         Me.DataViewerButton.Style = MetroFramework.MetroColorStyle.Red
         Me.DataViewerButton.TabIndex = 9
         Me.DataViewerButton.Text = "DATA VIEWER"
@@ -152,9 +151,9 @@ Partial Class Multimod
         '
         'Multimod
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(312, 300)
+        Me.ClientSize = New System.Drawing.Size(378, 368)
         Me.Controls.Add(Me.DataViewerButton)
         Me.Controls.Add(Me.VideoPlayerButton)
         Me.Controls.Add(Me.AudioPlayerButton)
@@ -164,12 +163,11 @@ Partial Class Multimod
         Me.Controls.Add(Me.ElanButton)
         Me.Controls.Add(Me.PraatButton)
         Me.Controls.Add(Me.ThemeCheckBox)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Multimod"
-        Me.Padding = New System.Windows.Forms.Padding(15, 60, 15, 16)
+        Me.Padding = New System.Windows.Forms.Padding(20, 74, 20, 20)
         Me.Resizable = False
         Me.Style = MetroFramework.MetroColorStyle.Green
         Me.Text = "Multimod"

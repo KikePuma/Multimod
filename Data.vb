@@ -31,8 +31,8 @@
     Public videoExtension As String = ".avi"
     Public videoName As String = "errorSettingName"
     Public videoDefaultCodec As AForge.Video.FFMPEG.VideoCodec = AForge.Video.FFMPEG.VideoCodec.Default
-    'Public fps As Integer = WebcamForm.fpsNum.Value 'Default: 30
-    ' Public videoBitRate As Integer = WebcamForm.bitrateNum.Value 'Default: 24915
+    Public fps As Integer = 30 'Default: 30
+    Public videoBitRate As Integer = 24915 'Default: 24915
 
     '' ## SYNCHRO VARIABLES ##
 

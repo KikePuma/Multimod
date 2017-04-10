@@ -2,12 +2,11 @@
 Imports WMPLib
 
 Public Class VideoPlayerForm
-
     'Default Form Size: 686;574
     Private Sub VideoPlayerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'ajustamos el WMPlayer a nuestro gusto
-        player.uiMode = "mini"
-        player.settings.volume = 100
+        player.uiMode = "None"
+        player.settings.volume = 0
         player.stretchToFit = True
         'cargamos el video
         If loadVideo.ShowDialog = DialogResult.OK Then
@@ -44,6 +43,4 @@ Public Class VideoPlayerForm
             MyTimer.Enabled = False
         End If
     End Sub
-
-
 End Class
