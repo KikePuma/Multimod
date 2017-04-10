@@ -1,5 +1,6 @@
 ﻿Public Class Multimod
     'creamos la subrutina para cambiar el tema con el CheckedBox
+
     Private Sub ThemeCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ThemeCheckBox.CheckedChanged
         If DarkTheme Then
             'cambiamos al Light Theme cuando tengamos el Dark
@@ -156,7 +157,15 @@
             Try
                 EmotivButton_Click(sender, e)
                 WebcamForm.startRecording()
+                System.Threading.Thread.Sleep(100)
                 VideoPlayerForm.playButton_Click(sender, e)
+
+
+
+                WebcamForm.mciSendString("open new Type waveaudio Alias recsound", "", 0, 0)
+                WebcamForm.mciSendString("record recsound", "", 0, 0)
+                WebcamForm.SaveFileDialog1.FileName = defaultOutputPath + DateTime.Now.ToString("ddMMyyyyHHmmssffff") + ".mp3"
+                'ponemos nombre al archivo 
             Catch ex As Exception
             End Try
             'cambiamos el texto del boton y el estilo del Form
@@ -168,6 +177,9 @@
             'paramos todo aquello que este grabando algo
             Try
                 VideoPlayerForm.pauseButton_Click(sender, e)
+                WebcamForm.mciSendString("save recsound " & WebcamForm.SaveFileDialog1.FileName, "", 0, 0)
+                WebcamForm.mciSendString("close recsound", "", 0, 0)
+                My.Computer.Audio.Stop()
                 WebcamForm.startRecording()
                 Dim eegWriterProcess As Process
                 Dim eegWriterProcesses() As Process
@@ -202,5 +214,9 @@
 
     Private Sub EmoApp_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         WebcamForm.WebcamForm_FormClosing(sender, e)
+    End Sub
+
+    Private Sub diadema_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class
